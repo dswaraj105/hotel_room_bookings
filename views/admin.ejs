@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Importing css file -->
+   <link rel="stylesheet" href="../css/bootstrap.min.css">
+   <link rel="stylesheet" href="../css/app.css">
+   <link rel="stylesheet" href="../css/admin.css">
+   <!-- Importing Javascript files -->
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous" defer></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" defer></script>
+   <script src="../js/bootstrap.min.js" defer></script>
+  <script src="../js/admin.js" defer></script>
+  <title>Admin</title>
+</head>
+<body>
+   <!-- Navbar -->
+   <%- include('./includes/navbar') %>
+
+   <div class="container">
+     <div class="search">
+       <form action="/admin/search" method="post">
+        <select name="seatch-type" id="select" class="select-search-option">
+          <option value="email">Email</option>
+          <option value="date">Date</option>
+        </select>
+        <input class="email-input" type="text" name="email" id="search-email" placeholder="Enter email">
+        <input class="date hide" type="date" name="date" id="search-date">
+        <button class="btn btn-success mx-3" type="submit">Search</button>
+      </form>
+    </div>
+    <% if(bookingDetails.length == 0) { %>
+      <h1><%= noresult %></h1>
+    <% } else {%>
+      <div class="result">
+        <% bookingDetails.forEach(bd => { %>
+          <div class="line">
+            <div class="b-detail email"><%= bd.C_ID %></div>
+            <div class="b-detail roomno"><%= bd.ROOMNO %></div>
+            <div class="b-detail b-date"><%= bd.CHECKIN %></div>
+          </div>
+        <% }) %>
+      </div>
+    <% } %>
+     <!-- <div class="result">
+       <div class="line">
+         <div class="b-detail email">swarajdas@gmail.com</div>
+         <div class="b-detail roomno">201</div>
+         <div class="b-detail">2020-12-5</div>
+       </div>
+       <div class="line">
+        <div class="b-detail email">swarajdas@gmail.com</div>
+        <div class="b-detail roomno">201</div>
+        <div class="b-detail">2020-12-5</div>
+      </div>
+      <div class="line">
+        <div class="b-detail email">swarajdas@gmail.com</div>
+        <div class="b-detail roomno">201</div>
+        <div class="b-detail">2020-12-5</div>
+      </div>
+     </div> -->
+   </div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<nav class="nav">
+  <div class="brand-title">HOTEL MARRIOTT</div>
+  <a href="#" class="toggle-button" id="toggle-nav">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </a>
+  <div class="navbar-links">
+    <ul>
+      <li>
+        <a href=<% if(home){ %> "#" <% }else{ %> "/" <% } %>>
+          HOME
+        </a>
+      </li>
+      <li><a href="#booking">RESERVATION</a></li>
+      <li><a href="#find-us">FIND US</a></li>
+      <li><a href="#find-us">CONTACT US</a></li>
+      <% if(home){ %>
+        <li class="location">
+          <select name="location" id="location">
+            <option value="delhi">Delhi</option>
+            <option value="patna">Patna</option>
+          </select>
+        </li>
+      <% } %>
+    </ul>
+  </div>
+</nav>

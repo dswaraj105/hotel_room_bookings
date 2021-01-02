@@ -1,0 +1,19 @@
+const path = require('path');
+const express = require('express');
+
+const router = express.Router();
+
+const products = [];
+
+router.get('/add-product', (req, res, next) => {
+  // res.send('<form action="/admin/add-product" method="POST"><input type="text" name="product"><button type="submit">Add Product</button></form>');
+  res.render('add-product');
+});
+
+router.post('/add-product', (req, res, next) => {
+  products.push({title : req.body.title});
+  res.redirect('/');
+});
+
+exports.router = router;
+exports.products = products;

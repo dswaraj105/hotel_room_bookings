@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- css files -->
+    <!-- <link rel="stylesheet" href="adminlogin.css" /> -->
+    <link rel="stylesheet" href="../css/adminlogin.css">
+    <script src="https://kit.fontawesome.com/8cc2295932.js" crossorigin="anonymous" defer></script>
+    <!-- js files -->
+    <script src="../js/adminlogin.js" defer> </script>
+    <title>HOTEL MARRIOTT</title>
+  </head>
+  <body>
+    <div class="container">
+      <% if(loginFailed) { %>
+        <div class="error-login">
+          <i class="fas fa-times"></i>
+          SORRY WRONG PASSWORD
+        </div>
+      <% } %>
+      <% if(login) { %>
+        <div class="error-login">
+          <i class="fas fa-times"></i>
+          PLEASE LOGIN TO ENTER
+        </div>
+      <% } %>
+      <form id="form" class="form" action="/admin/login" method="POST">
+        <h2>Register With Us</h2>
+        <div class="form-control">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Enter email" name="email"/>
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter password" name="password"/>
+          <small>Error message</small>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

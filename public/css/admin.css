@@ -1,0 +1,73 @@
+body{
+  background: #3a6186;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #89253e, #3a6186);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #89253e, #3a6186); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* form elements */
+.select-search-option{
+  width: 100px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.select-search-option :focus,
+.select-search-option :active{
+  border: none;
+  outline: none;
+}
+
+.email-input {
+  padding: 2px 10px;
+  border-radius: 5px;
+}
+
+.email-input :focus,
+.email-input :active{
+  border: none;
+  outline: none;
+}
+
+.hide{
+  display: none;
+}
+/* result container */
+.container{
+  text-align: center;
+  margin-top: 40px;
+}
+
+.line{
+  padding-top: 5px;
+}
+
+.result div{
+  margin-top: 20px;
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+}
+
+.b-detail{
+  background: #f85032;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #e73827, #f85032);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #e73827, #f85032); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  width: 100px;
+  text-align: left;
+  padding: 5px 10px;
+  margin: 3px 0;
+}
+
+.email{
+  width: 400px;
+}
+
+.b-date{
+  width: 400px;
+}
+
+/* .roomno{
+  border-left: 2px solid #3c3f41;
+} */
